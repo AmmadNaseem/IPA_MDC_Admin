@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "819041530713",
+    "project_id": "modern-dry-cleaners",
+    "storage_bucket": "modern-dry-cleaners.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:819041530713:android:54e53c195f517d43371248",
+        "android_client_info": {
+          "package_name": "com.moderndrycleaners.adminapp.moderndrycleanersadmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "819041530713-b84fa3hck81o2j4gpij4vd6rhvgsjrem.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQLj0LHwHkCF1i6zL5Px0b-kSkUv0CZRM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "819041530713-b84fa3hck81o2j4gpij4vd6rhvgsjrem.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "819041530713-dmj7jkt8ihhi46hu3gbbrhnc887r1vvr.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.moderndrycleaners.moderndrycleaners"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:819041530713:android:4b50314bce21deab371248",
+        "android_client_info": {
+          "package_name": "com.moderndrycleaners.moderndrycleaners"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "819041530713-b84fa3hck81o2j4gpij4vd6rhvgsjrem.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQLj0LHwHkCF1i6zL5Px0b-kSkUv0CZRM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "819041530713-b84fa3hck81o2j4gpij4vd6rhvgsjrem.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "819041530713-dmj7jkt8ihhi46hu3gbbrhnc887r1vvr.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.moderndrycleaners.moderndrycleaners"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

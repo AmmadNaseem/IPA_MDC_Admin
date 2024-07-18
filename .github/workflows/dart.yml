@@ -8,35 +8,49 @@ jobs:
     name: 🎉 iOS Build
     runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout Code
+        uses: actions/checkout@v3
 
-      - uses: subosito/flutter-action@v2
+      - name: Set Up Flutter
+        uses: subosito/flutter-action@v2
         with:
           channel: 'stable'
           architecture: x64
-      - run: flutter pub get
-      
 
-      - run: pod repo update
+      - name: Flutter Pub Get
+        run: flutter pub get
+
+      - name: Update CocoaPods
+        run: pod repo update
         working-directory: ios
 
-      - run: flutter build ios --release --no-codesign
+      - name: Build iOS App
+        run: flutter build ios --release --no-codesign
 
-      - run: mkdir Payload
+      - name: Create Payload Directory
+        run: mkdir Payload
         working-directory: build/ios/iphoneos
 
-      - run: mv Runner.app/ Payload
+      - name: Move App to Payload
+        run: mv Runner.app/ Payload
         working-directory: build/ios/iphoneos
 
-      - name: Zip output
+      - name: Zip Output
         run: zip -qq -r -9 FlutterIpaExport.ipa Payload
         working-directory: build/ios/iphoneos
 
-      - name: Upload binaries to release
+      - name: Upload Binaries to Release
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: build/ios/iphoneos/FlutterIpaExport.ipa
           tag: v1.0
           overwrite: true
-          body: "This is first release"
+          body: "This is the first release"
+      
+      - name: Debug Information
+        run: |
+          echo "Runner labels:"
+          echo $RUNNER_LABELS
+          echo "Available runners:"
+          curl -s 'https://api.github.com/repos/${{ github.repository }}/actions/runners' | jq .
